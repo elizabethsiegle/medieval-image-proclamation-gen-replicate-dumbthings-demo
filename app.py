@@ -9,6 +9,7 @@ import random
 st.set_page_config(page_title="Medieval Portrait Generator", page_icon="🏰", layout="centered")
 st.title("Medieval Portrait Generator 🏰")
 st.markdown("*Upload thy likeness and receive a most noble description befitting of medieval court!*")
+st.markdown("🔥 **Powered by [Replicate](https://replicate.com)** • 🌊 **Deployed on [DigitalOcean](https://www.digitalocean.com/products/app-platform)** • ⚡ **Built with [Streamlit](https://streamlit.io)**")
 
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 if not REPLICATE_API_TOKEN:
@@ -305,16 +306,12 @@ throughout the realm for their legendary prowess in {random.choice([
     return description.strip()
 
 # Main app interface
-st.markdown("### 📸 Upload thy portrait, noble one!")
+st.markdown("### 📸 Upload thy portrait, noble steed🐴!")
 
 # Add refresh button for AI-generated descriptors
 col1, col2 = st.columns([3, 1])
 with col1:
     st.markdown("*Using AI-generated medieval descriptors for maximum silliness!*")
-with col2:
-    if st.button("🔄 Refresh Descriptors", help="Generate new AI-powered medieval terms"):
-        st.cache_data.clear()
-        st.experimental_rerun()
 
 # Image upload
 uploaded_file = st.file_uploader(
@@ -531,6 +528,33 @@ st.markdown("""
 *Perfect for profile pics, social media, or becoming internet royalty!*
 """)
 
+# Replicate Models showcase
+st.markdown("### 🔥 Replicate AI Models Used")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+    **[🦙 LLaMA 3 70B](https://replicate.com/meta/meta-llama-3-70b-instruct)**
+    
+    Generates creative medieval descriptors, titles, and skills
+    """)
+
+with col2:
+    st.markdown("""
+    **[👁️ LLaVA 13B](https://replicate.com/yorickvp/llava-13b)**
+    
+    Computer vision for analyzing your photos
+    """)
+
+with col3:
+    st.markdown("""
+    **[🎨 nano-banana](https://replicate.com/google/nano-banana)**
+    
+    Advanced image editing for medieval transformations
+    """)
+
+st.markdown("*Explore these models and more on [Replicate.com](https://replicate.com) 🚀*")
+
 # Fun facts section
 with st.expander("🏰 Medieval Fun Facts & AI Features"):
     st.markdown("""
@@ -540,10 +564,18 @@ with st.expander("🏰 Medieval Fun Facts & AI Features"):
     - Many medieval names literally meant things like "John the Bread-Baker" or "Mary of the Big Hill"
     
     **AI Features Used:**
-    - **LLaMA 3 70B**: Generates creative medieval descriptors and analyzes descriptions
-    - **LLaVA 13B**: Computer vision for analyzing uploaded photos
-    - **nano-banana**: Advanced image editing for text overlays
+    - **[LLaMA 3 70B](https://replicate.com/meta/meta-llama-3-70b-instruct)**: Generates creative medieval descriptors and analyzes descriptions
+    - **[LLaVA 13B](https://replicate.com/yorickvp/llava-13b)**: Computer vision for analyzing uploaded photos
+    - **[nano-banana](https://replicate.com/google/nano-banana)**: Advanced image editing for text overlays and medieval transformations
     - **Smart Caching**: Reduces API calls and improves performance
+    
+    🔗 **Try these models yourself on [Replicate](https://replicate.com)!**
+    
+    **🛠️ Tech Stack:**
+    - **Frontend**: [Streamlit](https://streamlit.io) - The fastest way to build data apps
+    - **AI Platform**: [Replicate](https://replicate.com) - Run machine learning models in the cloud
+    - **Hosting**: [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform) - Deploy apps with ease
+    - **Source Code**: [GitHub](https://github.com/elizabethsiegle/medieval-image-proclamation-gen-replicate-dumbthings-demo) - Open source and collaborative
     
     *Your medieval persona is scientifically* calculated using cutting-edge AI (*still not actually scientific)*
     """)
@@ -565,6 +597,6 @@ st.markdown("""
 }
 </style>
 <div class="footer">
-    ⚔️ forged with medieval magic & modern AI 🏰 | made w/ ❤️ in sf🌉
+    ⚔️ forged with medieval magic & modern AI 🏰 | <a href="https://replicate.com" style="color: #ff6b6b;">Replicate</a> × <a href="https://www.digitalocean.com/products/app-platform" style="color: #0080ff;">DigitalOcean</a> × <a href="https://streamlit.io" style="color: #ff4b4b;">Streamlit</a> | <a href="https://github.com/elizabethsiegle/medieval-image-proclamation-gen-replicate-dumbthings-demo" style="color: #ffd700;">GitHub</a>
 </div>
 """, unsafe_allow_html=True)
