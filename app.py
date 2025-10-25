@@ -6,10 +6,16 @@ from io import BytesIO
 from PIL import Image
 import random
 
-st.set_page_config(page_title="Medieval Portrait Generator", page_icon="🏰", layout="centered")
+st.set_page_config(page_title="Medieval Portrait Generator w/ Replicate && DigitalOcean", page_icon="🏰", layout="centered")
 st.title("Medieval Portrait Generator 🏰")
 st.markdown("*Upload thy likeness and receive a most noble description befitting of medieval court!*")
 st.markdown("🔥 **Powered by [Replicate](https://replicate.com)** • 🌊 **Deployed on [DigitalOcean](https://www.digitalocean.com/products/app-platform)** • ⚡ **Built with [Streamlit](https://streamlit.io)**")
+
+# Demo video section
+st.markdown("### Dumb app video hosted on DigitalOcean spaces (S3 buckets) and this is a DO app")
+st.video("https://dumbthingsvideo.sfo3.cdn.digitaloceanspaces.com/dumbestwebsite.MOV")
+st.markdown("*Watch the Medieval Portrait Generator transform ordinary photos into hilarious royal proclamations!*")
+st.markdown("---")
 
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 if not REPLICATE_API_TOKEN:
