@@ -6,7 +6,7 @@ from io import BytesIO
 from PIL import Image
 import random
 
-st.set_page_config(page_title="Medieval Portrait Generator w/ Replicate && DigitalOcean", page_icon="🏰", layout="centered")
+st.set_page_config(page_title="Dumbest Website Ever video w/ Replicate && DigitalOcean", page_icon="🏰", layout="centered")
 st.title("Medieval Portrait Generator 🏰")
 st.markdown("*Upload thy likeness and receive a most noble description befitting of medieval court!*")
 st.markdown("🔥 **Powered by [Replicate](https://replicate.com)** • 🌊 **Deployed on [DigitalOcean](https://www.digitalocean.com/products/app-platform)** • ⚡ **Built with [Streamlit](https://streamlit.io)**")
