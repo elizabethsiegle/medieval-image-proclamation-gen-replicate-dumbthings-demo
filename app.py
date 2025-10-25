@@ -12,7 +12,7 @@ st.markdown("*Upload thy likeness and receive a most noble description befitting
 st.markdown("🔥 **Powered by [Replicate](https://replicate.com)** • 🌊 **Deployed on [DigitalOcean](https://www.digitalocean.com/products/app-platform)** • ⚡ **Built with [Streamlit](https://streamlit.io)**")
 
 # Demo video section
-st.markdown("### Dumb app video hosted on DigitalOcean spaces (S3 buckets) and this is a DO app")
+st.markdown("### Dumb app video hosted on DigitalOcean spaces (S3 buckets)")
 st.video("https://dumbthingsvideo.sfo3.cdn.digitaloceanspaces.com/dumbestwebsite.MOV")
 st.markdown("*Watch the Medieval Portrait Generator transform ordinary photos into hilarious royal proclamations!*")
 st.markdown("---")
